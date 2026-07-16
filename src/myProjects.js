@@ -2,8 +2,11 @@ import React, { useContext, useState } from "react";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import ArrowForward from "@mui/icons-material/ArrowForward";
+
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+
 import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import FolderIcon from "@mui/icons-material/Folder";
@@ -37,6 +40,21 @@ export default function MyProjects() {
       image: "/rejaser.png",
       link: "https://rejaser.vercel.app/",
     },
+        {
+      name: "برنامج كاشير",
+      description:
+      "برنامج كاشير  للمطاعم والمقاهي لتسهيل عملية البيع وإدارة المخزون.",
+      image: "/cashier.png",
+      link: "https://cashier-hewk-nine.vercel.app/",
+    },
+        {
+      name: "الطقس",
+      description:
+        "استخدام API لعرض حالة الطقس الحالية لموقع معين.",
+      image: "/weather.png",
+      link: "https://wether-api-zeta.vercel.app/",
+    },
+
   ]);
 
   return (
@@ -50,14 +68,16 @@ export default function MyProjects() {
       }}
     >
       <nav className="glass-nav">
-        <Button
-          component={Link}
-          to="/"
-          className="primary-btn"
-          startIcon={<ArrowOutward />}
-        >
-          Let's talk
-        </Button>
+<Button
+  component="a"
+  href="https://wa.me/201129788151"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="primary-btn"
+  startIcon={<ArrowOutward />}
+>
+  Let's Talk
+</Button>
 
         <div className="nav-center">
           <Button
@@ -133,6 +153,15 @@ export default function MyProjects() {
             >
               <GitHubIcon />
             </Button>
+                        <Button
+                          className="social-btn"
+                          href="https://www.linkedin.com/in/youssef-wael-b07555422/"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <LinkedInIcon />
+                        </Button>
+            
           </div>
         </div>
 
@@ -145,7 +174,7 @@ export default function MyProjects() {
                 {project.description}
               </span>
               <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <Button className="secondary-btn" endIcon={<ArrowForward />}>
+                <Button dir="ltr" className="secondary-btn" endIcon={<ArrowForward />}>
                   دخول المشروع
                 </Button>
               </a>

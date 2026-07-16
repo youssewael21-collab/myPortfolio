@@ -3,8 +3,11 @@ import { Button } from "@mui/material";
 import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaGitAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ArrowForward from "@mui/icons-material/ArrowForward";
+
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+
 import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import FolderIcon from "@mui/icons-material/Folder";
@@ -28,15 +31,16 @@ export default function MyPortfolio() {
       }}
     >
       <nav className="glass-nav">
-        <Button
-          component={Link}
-          to="/"
-          className="primary-btn"
-          startIcon={<ArrowOutward />}
-        >
-          Let's talk
-        </Button>
-
+<Button
+  component="a"
+  href="https://wa.me/201129788151"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="primary-btn"
+  startIcon={<ArrowOutward />}
+>
+  Let's Talk
+</Button>
         <div className="nav-center">
           <Button
             className="theme-toggle-btn"
@@ -128,6 +132,14 @@ export default function MyPortfolio() {
               rel="noreferrer"
             >
               <GitHubIcon />
+            </Button>
+            <Button
+              className="social-btn"
+              href="https://www.linkedin.com/in/youssef-wael-b07555422/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <LinkedInIcon />
             </Button>
           </div>
         </div>

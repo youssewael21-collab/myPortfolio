@@ -1,9 +1,13 @@
 import React, { useContext } from "react";
 import { Button } from "@mui/material";
 import { FaReact, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
+import { RiNextjsFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
+
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+
 import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import FolderIcon from "@mui/icons-material/Folder";
@@ -20,6 +24,8 @@ export default function Skills() {
     { name: "CSS", icon: <FaCss3Alt />, color: "#2563eb" },
     { name: "JavaScript", icon: <FaJs />, color: "#facc15" },
     { name: "React", icon: <FaReact />, color: "#38bdf8" },
+    { name: "APIs", icon: <SettingsSuggestIcon />, color: "#fff" },
+    // { name: "Next.js", icon: <RiNextjsFill />, color: theme === "light" ? "#000" : "#fff" },
   ];
 
   return (
@@ -34,12 +40,14 @@ export default function Skills() {
     >
       <nav className="glass-nav">
         <Button
-          component={Link}
-          to="/"
+          component="a"
+          href="https://wa.me/201129788151"
+          target="_blank"
+          rel="noopener noreferrer"
           className="primary-btn"
           startIcon={<ArrowOutward />}
         >
-          Let's talk
+          Let's Talk
         </Button>
 
         <div className="nav-center">
@@ -116,12 +124,30 @@ export default function Skills() {
             >
               <GitHubIcon />
             </Button>
+            <Button
+              className="social-btn"
+              href="https://www.linkedin.com/in/youssef-wael-b07555422/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <LinkedInIcon />
+            </Button>
           </div>
         </div>
 
-        <div className="skill-grid" >
+        <div className="skill-grid">
           {skills.map((skill) => (
-            <div key={skill.name} className="skill-card" style={{  background: theme === "light" ? "rgb(255, 255, 255)": "rgba(255, 255, 255, 0.08)", borderRadius: "20px"}}>
+            <div
+              key={skill.name}
+              className="skill-card"
+              style={{
+                background:
+                  theme === "light"
+                    ? "rgb(255, 255, 255)"
+                    : "rgba(255, 255, 255, 0.08)",
+                borderRadius: "20px",
+              }}
+            >
               <div style={{ fontSize: 28, color: skill.color }}>
                 {skill.icon}
               </div>
