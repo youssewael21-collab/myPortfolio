@@ -40,21 +40,19 @@ export default function MyProjects() {
       image: "/rejaser.png",
       link: "https://rejaser.vercel.app/",
     },
-        {
+    {
       name: "برنامج كاشير",
       description:
-      "برنامج كاشير  للمطاعم والمقاهي لتسهيل عملية البيع وإدارة المخزون.",
+        "برنامج كاشير  للمطاعم والمقاهي لتسهيل عملية البيع وإدارة المخزون.",
       image: "/cashier.png",
       link: "https://cashier-hewk-nine.vercel.app/",
     },
-        {
+    {
       name: "الطقس",
-      description:
-        "استخدام API لعرض حالة الطقس الحالية لموقع معين.",
+      description: "استخدام API لعرض حالة الطقس الحالية لموقع معين.",
       image: "/weather.png",
       link: "https://wether-api-zeta.vercel.app/",
     },
-
   ]);
 
   return (
@@ -68,16 +66,16 @@ export default function MyProjects() {
       }}
     >
       <nav className="glass-nav">
-<Button
-  component="a"
-  href="https://wa.me/201129788151"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="primary-btn"
-  startIcon={<ArrowOutward />}
->
-  Let's Talk
-</Button>
+        <Button
+          component="a"
+          href="https://wa.me/201129788151"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="primary-btn"
+          startIcon={<ArrowOutward />}
+        >
+          Let's Talk
+        </Button>
 
         <div className="nav-center">
           <Button
@@ -93,7 +91,13 @@ export default function MyProjects() {
             className="nav-pill"
             startIcon={<HomeIcon />}
           >
-            Home
+            <span
+              style={{
+                display: window.innerWidth <= 600 ? "none" : "inline",
+              }}
+            >
+              Home
+            </span>
           </Button>
           <Button
             component={Link}
@@ -101,7 +105,13 @@ export default function MyProjects() {
             className="nav-pill"
             startIcon={<FolderIcon />}
           >
-            Projects
+            <span
+              style={{
+                display: window.innerWidth <= 600 ? "none" : "inline",
+              }}
+            >
+              projects
+            </span>
           </Button>
           <Button
             component={Link}
@@ -109,7 +119,13 @@ export default function MyProjects() {
             className="nav-pill"
             startIcon={<AccountCircleIcon />}
           >
-            About
+            <span
+              style={{
+                display: window.innerWidth <= 600 ? "none" : "inline",
+              }}
+            >
+              About
+            </span>
           </Button>
           <Button
             component={Link}
@@ -117,7 +133,13 @@ export default function MyProjects() {
             className="nav-pill"
             startIcon={<SettingsSuggestIcon />}
           >
-            Skills
+            <span
+              style={{
+                display: window.innerWidth <= 600 ? "none" : "inline",
+              }}
+            >
+              Skills
+            </span>
           </Button>
         </div>
 
@@ -153,15 +175,14 @@ export default function MyProjects() {
             >
               <GitHubIcon />
             </Button>
-                        <Button
-                          className="social-btn"
-                          href="https://www.linkedin.com/in/youssef-wael-b07555422/"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <LinkedInIcon />
-                        </Button>
-            
+            <Button
+              className="social-btn"
+              href="https://www.linkedin.com/in/youssef-wael-b07555422/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <LinkedInIcon />
+            </Button>
           </div>
         </div>
 
@@ -174,7 +195,11 @@ export default function MyProjects() {
                 {project.description}
               </span>
               <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <Button dir="ltr" className="secondary-btn" endIcon={<ArrowForward />}>
+                <Button
+                  dir="ltr"
+                  className="secondary-btn"
+                  endIcon={<ArrowForward />}
+                >
                   دخول المشروع
                 </Button>
               </a>

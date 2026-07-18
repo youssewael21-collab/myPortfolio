@@ -64,7 +64,13 @@ export default function Skills() {
             className="nav-pill"
             startIcon={<HomeIcon />}
           >
-            Home
+            <span
+              style={{
+                display: window.innerWidth <= 600 ? "none" : "inline",
+              }}
+            >
+              Home
+            </span>
           </Button>
           <Button
             component={Link}
@@ -72,7 +78,13 @@ export default function Skills() {
             className="nav-pill"
             startIcon={<FolderIcon />}
           >
-            Projects
+            <span
+              style={{
+                display: window.innerWidth <= 600 ? "none" : "inline",
+              }}
+            >
+              projects
+            </span>
           </Button>
           <Button
             component={Link}
@@ -80,7 +92,13 @@ export default function Skills() {
             className="nav-pill"
             startIcon={<AccountCircleIcon />}
           >
-            About
+            <span
+              style={{
+                display: window.innerWidth <= 600 ? "none" : "inline",
+              }}
+            >
+              About
+            </span>
           </Button>
           <Button
             component={Link}
@@ -88,7 +106,13 @@ export default function Skills() {
             className="nav-pill"
             startIcon={<SettingsSuggestIcon />}
           >
-            Skills
+            <span
+              style={{
+                display: window.innerWidth <= 600 ? "none" : "inline",
+              }}
+            >
+              Skills
+            </span>
           </Button>
         </div>
 

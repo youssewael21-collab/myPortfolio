@@ -31,16 +31,17 @@ export default function MyPortfolio() {
       }}
     >
       <nav className="glass-nav">
-<Button
-  component="a"
-  href="https://wa.me/201129788151"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="primary-btn"
-  startIcon={<ArrowOutward />}
->
-  Let's Talk
-</Button>
+        <Button
+          component="a"
+          href="https://wa.me/201129788151"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="primary-btn"
+          startIcon={<ArrowOutward />}
+        >
+          Let's Talk
+        </Button>
+
         <div className="nav-center">
           <Button
             className="theme-toggle-btn"
@@ -55,7 +56,13 @@ export default function MyPortfolio() {
             className="nav-pill"
             startIcon={<HomeIcon />}
           >
-            Home
+            <span
+              style={{
+                display: window.innerWidth <= 600 ? "none" : "inline",
+              }}
+            >
+              Home
+            </span>
           </Button>
           <Button
             component={Link}
@@ -63,7 +70,13 @@ export default function MyPortfolio() {
             className="nav-pill"
             startIcon={<FolderIcon />}
           >
-            Projects
+            <span
+              style={{
+                display: window.innerWidth <= 600 ? "none" : "inline",
+              }}
+            >
+              projects
+            </span>
           </Button>
           <Button
             component={Link}
@@ -71,7 +84,13 @@ export default function MyPortfolio() {
             className="nav-pill"
             startIcon={<AccountCircleIcon />}
           >
-            About
+            <span
+              style={{
+                display: window.innerWidth <= 600 ? "none" : "inline",
+              }}
+            >
+              About
+            </span>
           </Button>
           <Button
             component={Link}
@@ -79,7 +98,13 @@ export default function MyPortfolio() {
             className="nav-pill"
             startIcon={<SettingsSuggestIcon />}
           >
-            Skills
+            <span
+              style={{
+                display: window.innerWidth <= 600 ? "none" : "inline",
+              }}
+            >
+              Skills
+            </span>
           </Button>
         </div>
 

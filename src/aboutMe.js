@@ -56,16 +56,16 @@ export default function AboutMe() {
       }}
     >
       <nav className="glass-nav">
-<Button
-  component="a"
-  href="https://wa.me/201129788151"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="primary-btn"
-  startIcon={<ArrowOutward />}
->
-  Let's Talk
-</Button>
+        <Button
+          component="a"
+          href="https://wa.me/201129788151"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="primary-btn"
+          startIcon={<ArrowOutward />}
+        >
+          Let's Talk
+        </Button>
 
         <div className="nav-center">
           <Button
@@ -81,7 +81,13 @@ export default function AboutMe() {
             className="nav-pill"
             startIcon={<HomeIcon />}
           >
-            Home
+            <span
+              style={{
+                display: window.innerWidth <= 600 ? "none" : "inline",
+              }}
+            >
+              Home
+            </span>
           </Button>
           <Button
             component={Link}
@@ -89,7 +95,13 @@ export default function AboutMe() {
             className="nav-pill"
             startIcon={<FolderIcon />}
           >
-            Projects
+            <span
+              style={{
+                display: window.innerWidth <= 600 ? "none" : "inline",
+              }}
+            >
+              projects
+            </span>
           </Button>
           <Button
             component={Link}
@@ -97,7 +109,13 @@ export default function AboutMe() {
             className="nav-pill"
             startIcon={<AccountCircleIcon />}
           >
-            About
+            <span
+              style={{
+                display: window.innerWidth <= 600 ? "none" : "inline",
+              }}
+            >
+              About
+            </span>
           </Button>
           <Button
             component={Link}
@@ -105,7 +123,13 @@ export default function AboutMe() {
             className="nav-pill"
             startIcon={<SettingsSuggestIcon />}
           >
-            Skills
+            <span
+              style={{
+                display: window.innerWidth <= 600 ? "none" : "inline",
+              }}
+            >
+              Skills
+            </span>
           </Button>
         </div>
 
@@ -120,16 +144,21 @@ export default function AboutMe() {
       <div className="about-grid" style={{ color: "#0f172a" }}>
         <div
           className="section-card glass-card"
-          style={{             background: theme === "light" ? " #fff" : " #111827",
-}}
+          style={{ background: theme === "light" ? " #fff" : " #111827" }}
         >
           <div className="badge" style={{ color: "#7c3aed" }}>
             من أنا؟
           </div>
-          <h2 className="hero-title" style={{ color: theme === "light"? "#111827": "#ffffff" }}>
+          <h2
+            className="hero-title"
+            style={{ color: theme === "light" ? "#111827" : "#ffffff" }}
+          >
             شخص عنده افكار حابب يشوفها.. قرر يعملها هو بنفسه
           </h2>
-          <span className="hero-copy" style={{ color: theme === "light"? "#475569" : "#fff" }}>
+          <span
+            className="hero-copy"
+            style={{ color: theme === "light" ? "#475569" : "#fff" }}
+          >
             أركز على البساطة، الوضوح، واللمسة البصرية التي تجعل المشروع يبرز.
           </span>
 
@@ -139,7 +168,10 @@ export default function AboutMe() {
               href="https://www.instagram.com/youssif_goo_/"
               target="_blank"
               rel="noreferrer"
-              style={{ color: theme === "light"? "#111827": "#ffffff", background: "rgba(15,23,42,0.08)" }}
+              style={{
+                color: theme === "light" ? "#111827" : "#ffffff",
+                background: "rgba(15,23,42,0.08)",
+              }}
             >
               <InstagramIcon />
             </Button>
@@ -148,19 +180,21 @@ export default function AboutMe() {
               href="https://github.com/youssewael21-collab"
               target="_blank"
               rel="noreferrer"
-              style={{ color: theme === "light"? "#111827": "#fff", background: "rgba(15,23,42,0.08)" }}
+              style={{
+                color: theme === "light" ? "#111827" : "#fff",
+                background: "rgba(15,23,42,0.08)",
+              }}
             >
               <GitHubIcon />
             </Button>
-                        <Button
-                          className="social-btn"
-                          href="https://www.linkedin.com/in/youssef-wael-b07555422/"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <LinkedInIcon />
-                        </Button>
-            
+            <Button
+              className="social-btn"
+              href="https://www.linkedin.com/in/youssef-wael-b07555422/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <LinkedInIcon />
+            </Button>
           </div>
         </div>
 
